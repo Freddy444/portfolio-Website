@@ -13,8 +13,9 @@
       <div class="logo">Freddy Fabian</div>
       <div>
         <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="#experience">Experience</a></li>
+          <li><a href="#experience">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -30,30 +31,29 @@
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
     <section id="profile">
-      <div class="section__pic-container">
+      <div class="profile-pic" id="animation-container"></div>
         <div class="profile-pic">
-        <img src="meimage-removebg-preview.png" alt="Freddy's profile picture" />
         </div>
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Freddy Fabian</h1>
-        <p class="section__text__p2">Frontend Developer</p>
+        <p class="section__text__p2">Full stack Developer</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('swresume.pdf')"
+            id="downloadCVButton"
           >
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button class="btn btn-color-1" id="contactInfoButton">
             Contact Info
           </button>
         </div>
@@ -74,7 +74,7 @@
       </div>
     </section>
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
+      <p class="section__text__p1">Get To Know a Little</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
@@ -123,140 +123,6 @@
         onclick="location.href='./#experience'"
       />
     </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -270,7 +136,7 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="experience-sub-title project-title">Ourcampus</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -294,7 +160,7 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <h2 class="experience-sub-title project-title">Private messaging app</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -337,10 +203,231 @@
         </div>
       </div>
       <img
-        src="./assets/arrow.png"
+        src="arrow.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <div>
+                  <h3>JavaScript</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>TypeScript</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>PHP</h3>
+               </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Consulting(SAS)</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Encryption</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Cloud functions</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>SQL</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>C</h3>
+                </div>
+              </article>
+              <article>
+              <article>
+              <article>
+                <div>
+                  <h3>Firebase</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Data Analysis</h2>
+            <div class="article-container">
+              <article>
+                <div>
+                  <h3>Python</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>R</h3>
+               </div>
+              </article>
+              <article>
+                <div>
+                  <h3>SASS</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>JavaScript</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>TypeScript</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Data mining</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Data visuals</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Monte Carlo</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Jupyter</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Machine Learning</h2>
+            <div class="article-container">
+              <article>
+                <div>
+                  <h3>Python</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Audio analysis</h3>
+               </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Visual analysis</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Tensorflow</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Scikit-learn</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>PyTorch</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Azure</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Deep-learning</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Random Forrest</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Classification</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <div>
+                  <h3>React</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>HTML</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>CSS</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Web-dev</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>App dev</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>CRUD method</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Git</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Shader</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>ThreeJS</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
       />
     </section>
     <section id="contact">
@@ -363,6 +450,14 @@
           />
           <p><a href="https://www.linkedin.com/in/freddy-fabian-784395223/">LinkedIn</a></p>
         </div>
+        <div class="contact-info-container">
+          <img
+            src="phone.png"
+            alt="phone icon"
+            class="icon contact-icon"
+          />
+          <p><a>(860) 879-8609</a></p>
+        </div>
       </div>
     </section>
     <footer>
@@ -370,7 +465,7 @@
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#experience">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -378,5 +473,116 @@
       </nav>
     </footer>
     <script src="script.js"></script>
+    <script type="module">
+import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
+
+const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 10);
+camera.position.z = 1;
+
+const scene = new THREE.Scene();
+
+const cubeGeometry = new THREE.BoxGeometry(0.6, 0.4, 0.4); // Adjusted proportions
+const pastelColors = [0xfed8b1, 0xa0e7e5, 0xffd3e3, 0xb8f2e6, 0xffe1a5, 0xc8b5ff]; // Pastel color palette
+
+function createCubeBlock(x, y, z, color, scale) {
+  const geometry = new THREE.BoxGeometry(0.15 * scale, 0.15 * scale, 0.15 * scale); // Adjusted proportions
+  const material = new THREE.MeshBasicMaterial({ color: color });
+  const cubeBlock = new THREE.Mesh(geometry, material);
+  cubeBlock.position.set(x, y, z);
+  scene.add(cubeBlock);
+  return cubeBlock;
+}
+
+// Create the outer set of cubes
+let colorIndexOuter = 0;
+const spacingOuter = 0.4; // Adjusted spacing
+const cubeScaleOuter = 0.9; // Adjusted scale
+const sceneScale = 0.5; // Adjusted scale for the entire scene
+for (let x = -spacingOuter; x <= spacingOuter; x += spacingOuter * 2) {
+  for (let y = -spacingOuter; y <= spacingOuter; y += spacingOuter * 2) {
+    for (let z = -spacingOuter; z <= spacingOuter; z += spacingOuter * 2) {
+      const colorOuter = pastelColors[colorIndexOuter % pastelColors.length];
+      createCubeBlock(x, y, z, colorOuter, cubeScaleOuter);
+      colorIndexOuter++;
+    }
+  }
+}
+
+// Create the inner set of cubes in the middle
+let colorIndexInner = 0;
+const spacingInner = 0.15; // Adjusted spacing for inner cubes
+const cubeScaleInner = 0.5; // Adjusted scale for inner cubes
+const centerCubes = [];
+for (let x = -spacingInner; x <= spacingInner; x += spacingInner * 2) {
+  for (let y = -spacingInner; y <= spacingInner; y += spacingInner * 2) {
+    for (let z = -spacingInner; z <= spacingInner; z += spacingInner * 2) {
+      const colorInner = pastelColors[colorIndexInner % pastelColors.length];
+      const centerCube = createCubeBlock(x, y, z, colorInner, cubeScaleInner);
+      centerCubes.push(centerCube);
+      colorIndexInner++;
+    }
+  }
+}
+
+// Create additional set of cubes for the nexus-like movement
+const nexusCubes = [];
+for (let i = 0; i < 20; i++) {
+  const colorNexus = pastelColors[i % pastelColors.length];
+  const nexusCube = createCubeBlock(0, 0, 0, colorNexus, 0.2);
+  nexusCubes.push(nexusCube);
+}
+
+scene.scale.set(sceneScale, sceneScale, sceneScale); // Adjust the scale of the entire scene
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setClearColor(0x000000, 0);
+document.getElementById('animation-container').appendChild(renderer.domElement);
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+function animation(time) {
+  scene.rotation.x = time / 1000;
+  scene.rotation.y = time / 1000;
+
+  // Complex movement for the center cubes
+  const speedCenter = 1.5;
+  const radiusCenter = 0.4;
+  const angleCenter = time * 0.001 * speedCenter;
+
+  centerCubes.forEach((centerCube, index) => {
+    const offsetX = Math.sin(angleCenter + index * 0.5) * radiusCenter;
+    const offsetY = Math.cos(angleCenter + index * 0.5) * radiusCenter;
+    const offsetZ = Math.sin(angleCenter + index * 0.5) * radiusCenter;
+
+    centerCube.position.set(offsetX, offsetY, offsetZ);
+  });
+
+  // Nexus-like movement for the additional cubes
+  const speedNexus = 1.0;
+  const radiusNexus = 0.6;
+  const angleNexus = time * 0.001 * speedNexus;
+
+  nexusCubes.forEach((nexusCube, index) => {
+    const offsetX = Math.sin(angleNexus + index * 0.2) * radiusNexus;
+    const offsetY = Math.cos(angleNexus + index * 0.2) * radiusNexus;
+    const offsetZ = Math.sin(angleNexus + index * 0.2) * radiusNexus;
+
+    nexusCube.position.set(offsetX, offsetY, offsetZ);
+  });
+
+  renderer.render(scene, camera);
+}
+
+renderer.setAnimationLoop(animation);
+// Stop the animation loop when the page is being unloaded
+window.addEventListener('beforeunload', () => {
+  renderer.setAnimationLoop(null);
+});
+    </script>
   </body>
 </html>

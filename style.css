@@ -1,5 +1,4 @@
 /* GENERAL */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
@@ -19,36 +18,27 @@ p {
   color: rgb(85, 85, 85);
 }
 
-/*profile pic */
-/* Add this style to your existing CSS */
+#animation-container {
+  position: absolute;
+  top: 10%;
+  left: -13%;
+  width: 200px;
+  height: 200px;
+  z-index: -20;
+}
 
-.profile-pic {
-    width: auto; /* Adjust the size of the circle as needed */
-    max-width: 350px;
-    /* rounded edges */
-    border-radius: 50%;
-    overflow: hidden; /* Ensures the image stays within the circle */
-    background-color: #C4F4C7; /* Peach color, you can adjust the color code */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-  }
-  
-  .profile-pic img {
-    width: 100%; /* Make sure the image takes up 100% of the circle */
-    height: auto; /* Maintain the aspect ratio */
-  }  
+#animation-container canvas {
+  width: 100%;
+  height: 100%;
+}
 
 /* TRANSITION */
-
 a,
 .btn {
   transition: all 300ms ease;
 }
 
 /* DESKTOP NAV */
-
 nav,
 .nav-links {
   display: flex;
@@ -88,7 +78,6 @@ a:hover {
 }
 
 /* HAMBURGER MENU */
-
 #hamburger-nav {
   display: none;
 }
@@ -168,7 +157,6 @@ a:hover {
 }
 
 /* SECTIONS */
-
 section {
   padding-top: 4vh;
   height: 96vh;
@@ -182,12 +170,18 @@ section {
 }
 
 /* PROFILE SECTION */
-
 #profile {
   display: flex;
   justify-content: center;
-  gap: 10rem;
+  gap: 44rem;
   height: 80vh;
+}
+
+.profile-pic {
+  display: flex;
+  height: 400px;
+  width: 300px;
+  margin: auto 0;
 }
 
 .section__pic-container {
@@ -200,6 +194,7 @@ section {
 .section__text {
   align-self: center;
   text-align: center;
+  height: -200px
 }
 
 .section__text p {
@@ -228,14 +223,12 @@ section {
 }
 
 /* ICONS */
-
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
 /* BUTTONS */
-
 .btn-container {
   display: flex;
   justify-content: center;
@@ -283,7 +276,6 @@ section {
 }
 
 /* ABOUT SECTION */
-
 #about {
   position: relative;
 }
@@ -336,7 +328,6 @@ section {
 }
 
 /* EXPERIENCE SECTION */
-
 #experience {
   position: relative;
 }
@@ -375,7 +366,6 @@ article .icon {
 }
 
 /* PROJECTS SECTION */
-
 #projects {
   position: relative;
 }
@@ -402,7 +392,6 @@ article .icon {
 }
 
 /* CONTACT */
-
 #contact {
   display: flex;
   justify-content: center;
@@ -442,7 +431,6 @@ article .icon {
 }
 
 /* FOOTER SECTION */
-
 footer {
   height: 26vh;
   margin: 0 1rem;
@@ -452,27 +440,71 @@ footer p {
   text-align: center;
 }
 
-
-
 /* ABOUT SECTION */
-
 #about {
-    position: relative;
-  }
-  
-  .about-containers {
-    gap: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    flex-direction: column; /* Change to column */
-  }
-  
-  .about-details-container {
-    justify-content: center;
-    /* flex-direction: column; Remove this line */
-  }
-  
-  .details-container {
-    /* ... (Existing styles) */
-    width: 100%; /* Adjust the width to take the full width */
-  }
+  position: relative;
+}
+
+.about-contains {
+  gap: 2rem;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+.about-details-container {
+  justify-content: center;
+  position: relative;
+}
+
+.details-container {
+  position: relative;
+}
+
+.description {
+  position: absolute;
+  top: 50%;
+  right: -260px;
+  width: 200px;
+  transform: translateY(-50%);
+}
+
+.description h3 {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  white-space: nowrap;
+}
+
+.description article {
+  position: absolute;
+  right: -29%;
+  top: 20%;
+}
+
+.details-container article {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.description h1 {
+  margin-bottom: 15rem;
+  text-align: left;
+}
+
+.about-details-container .description {
+  margin-top: 100px; 
+  padding: 50px;
+  border: 1px  #ccc;
+  border-radius: 10px;
+  margin-bottom: 350px;
+  width: 75%;
+  right: -650px
+}
+
+.description p {
+  margin-top: -140px; 
+  margin-bottom: 350px;
+  text-align: left;
+
+}
